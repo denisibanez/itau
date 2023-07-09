@@ -1,0 +1,11 @@
+.formselect__select {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+
+  ::ng-deep.mat-form-field {
+    width: 100%;
+  }
+}

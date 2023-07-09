@@ -1,0 +1,36 @@
+@import '../../../assets/scss/_main';
+
+.table__wrapper {
+  table {
+    width: 100%;
+
+    ul {
+      list-style: none;
+    }
+  }
+
+  .status {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    &.active {
+      background-color: $accent;
+    }
+
+    &.inactive {
+      background-color: $error;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .table__wrapper {
+    width: 100%;
+    overflow: auto;
+
+    td {
+      min-width: 115px;
+    }
+  }
+}

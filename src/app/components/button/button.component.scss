@@ -1,0 +1,30 @@
+@import '../../../assets/scss/_main';
+
+.size__large {
+  &.mat-raised-button {
+    @include font-format($color: $white, $size: 16px, $line-height: 16px);
+    border-radius: 5px;
+    height: 44px;
+    i {
+      position: relative;
+      bottom: 2px;
+    }
+  }
+}
+
+.mat-raised-button {
+  @include font-format($color: $white, $size: 12px);
+  border-radius: 5px;
+  height: 32px;
+}
+
+.btnCustom__error {
+  background-color: $error;
+}
+
+@media (max-width: 991px) {
+  ::ng-deep.mat-raised-button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

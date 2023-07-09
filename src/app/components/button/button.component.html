@@ -1,0 +1,18 @@
+<button
+  [color]="color"
+  [disabled]="disabled"
+  mat-raised-button
+  class="mat-elevation-z0"
+  [ngClass]="{ btnCustom__error: color === 'error', size__large: large }"
+  (click)="onBtnClick()"
+>
+  <i
+    [ngClass]="icon.label"
+    *ngIf="icon.position === 'left' && icon.show === true"
+  ></i>
+  {{ label }}
+  <i
+    [ngClass]="icon.label"
+    *ngIf="icon.position === 'right' && icon.show === true"
+  ></i>
+</button>

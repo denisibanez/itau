@@ -1,0 +1,32 @@
+// GLOBAL
+@import '../../../assets/scss/_main.scss';
+
+.home {
+  &__wrapper {
+    padding: 30px 0;
+  }
+
+  &__description {
+    h1 {
+      margin: 0;
+      @include font-format(
+        $color: $gray,
+        $font: 'Roboto',
+        $size: 24px,
+        $weight: 700,
+        $line-height: 24px
+      );
+    }
+
+    p {
+      margin: 0;
+      @include font-format(
+        $color: $gray,
+        $font: 'Roboto',
+        $size: 16px,
+        $weight: 400,
+        $line-height: 24px
+      );
+    }
+  }
+}

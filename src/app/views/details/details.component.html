@@ -1,0 +1,164 @@
+<div class="details__wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="details__description">
+          <h1>Polos Itaú</h1>
+          <p>Exibindo detalhes do polo nome - id</p>
+        </div>
+      </div>
+    </div>
+
+    <form novalidate [formGroup]="formAtribute">
+      <div class="row">
+        <div class="col-md-12">
+          <p>Detalhes do endereço</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <app-form-field
+            [mask]="inputs.zipCode.mask"
+            [item]="inputs.zipCode"
+            [type]="inputs.zipCode.type"
+            [label]="inputs.zipCode.label"
+            [control]="inputs.zipCode.control"
+            [formAtribute]="formAtribute"
+            (blurEvent)="onBlurEventZipCode($event)"
+          ></app-form-field>
+        </div>
+
+        <div class="col-md-4">
+          <app-form-field
+            [item]="inputs.street"
+            [type]="inputs.street.type"
+            [label]="inputs.street.label"
+            [control]="inputs.street.control"
+            [formAtribute]="formAtribute"
+            (blurEvent)="onBlurEvent($event)"
+            (focusEvent)="onFocusEvent($event)"
+          ></app-form-field>
+        </div>
+        <div class="col-md-2">
+          <app-form-field
+            [item]="inputs.district"
+            [type]="inputs.district.type"
+            [label]="inputs.district.label"
+            [control]="inputs.district.control"
+            [formAtribute]="formAtribute"
+            (blurEvent)="onBlurEvent($event)"
+            (focusEvent)="onFocusEvent($event)"
+          ></app-form-field>
+        </div>
+        <div class="col-md-2">
+          <app-form-field
+            [item]="inputs.state"
+            [type]="inputs.state.type"
+            [label]="inputs.state.label"
+            [control]="inputs.state.control"
+            [formAtribute]="formAtribute"
+            (blurEvent)="onBlurEvent($event)"
+            (focusEvent)="onFocusEvent($event)"
+          ></app-form-field>
+        </div>
+        <div class="col-md-2">
+          <app-form-field
+            [item]="inputs.city"
+            [type]="inputs.city.type"
+            [label]="inputs.city.label"
+            [control]="inputs.city.control"
+            [formAtribute]="formAtribute"
+            (blurEvent)="onBlurEvent($event)"
+            (focusEvent)="onFocusEvent($event)"
+          ></app-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <p>Detalhes da empresa</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <app-form-field
+            [item]="inputs.companyName"
+            [type]="inputs.companyName.type"
+            [label]="inputs.companyName.label"
+            [control]="inputs.companyName.control"
+            [formAtribute]="formAtribute"
+            (blurEvent)="onBlurEvent($event)"
+            (focusEvent)="onFocusEvent($event)"
+          ></app-form-field>
+        </div>
+        <div class="col-md-2">
+          <app-form-field
+            [item]="inputs.business"
+            [type]="inputs.business.type"
+            [label]="inputs.business.label"
+            [control]="inputs.business.control"
+            [formAtribute]="formAtribute"
+            (blurEvent)="onBlurEvent($event)"
+            (focusEvent)="onFocusEvent($event)"
+          ></app-form-field>
+        </div>
+        <div class="col-md-2">
+          <app-form-field
+            [item]="inputs.price"
+            [type]="inputs.price.type"
+            [label]="inputs.price.label"
+            [control]="inputs.price.control"
+            [formAtribute]="formAtribute"
+            (blurEvent)="onBlurEvent($event)"
+            (focusEvent)="onFocusEvent($event)"
+          ></app-form-field>
+        </div>
+        <div class="col-md-2">
+          <app-form-field
+            [mask]="inputs.document.mask"
+            [item]="inputs.document"
+            [type]="inputs.document.type"
+            [label]="inputs.document.label"
+            [control]="inputs.document.control"
+            [formAtribute]="formAtribute"
+            (blurEvent)="onBlurEvent($event)"
+            (focusEvent)="onFocusEvent($event)"
+          ></app-form-field>
+        </div>
+        <div class="col-md-2">
+          <app-form-select
+            [list]="inputs.status.list"
+            [label]="inputs.status.label"
+            [control]="inputs.status.control"
+            [placeholder]="inputs.status.placeholder"
+            [formAtribute]="formAtribute"
+            (blurEvent)="onBlurEvent($event)"
+            (focusEvent)="onFocusEvent($event)"
+          ></app-form-select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="details__buttons">
+            <app-button
+              [large]="false"
+              [color]="'accent'"
+              [label]="'Voltar'"
+              (btnClick)="onBtnClick('BACK')"
+            ></app-button>
+            <app-button
+              class="ml-15"
+              [large]="false"
+              [label]="'Salvar'"
+              (btnClick)="onBtnClick('SUBMIT')"
+              [disabled]="!formAtribute.valid"
+            ></app-button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

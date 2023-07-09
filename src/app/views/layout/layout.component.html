@@ -1,0 +1,31 @@
+<!-- Loader -->
+<div *ngIf="chargeLoader">
+  <app-custom-loader
+    [brand]="
+      'https://logodownload.org/wp-content/uploads/2019/12/itau-bba-logo-1.png'
+    "
+  ></app-custom-loader>
+</div>
+
+<!-- Header -->
+<app-header *ngIf="!chargeLoader"> </app-header>
+
+<div class="app__content">
+  <!-- Pages -->
+  <div class="app__content--wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!-- Snackbar -->
+<app-snackbar
+  *ngIf="snackbar"
+  [duration]="snackbar.duration"
+  [icon]="snackbar.icon"
+  [theme]="snackbar.theme"
+  [message]="snackbar.message"
+  [horizontalPosition]="snackbar.horizontalPosition"
+  [verticalPosition]="snackbar.verticalPosition"
+  [show]="snackbar.show"
+>
+</app-snackbar>

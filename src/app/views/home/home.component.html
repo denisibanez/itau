@@ -1,0 +1,48 @@
+<div *ngIf="!chargeLoader" class="home__wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="home__description">
+          <h1>Polos Itaú</h1>
+          <p>Confira abaixo alguns dos principais polos do itaú</p>
+        </div>
+      </div>
+      <div class="col-md-3 offset-md-4">
+        <form novalidate [formGroup]="formAtribute">
+          <app-form-field
+            [item]="inputs.search"
+            [type]="inputs.search.type"
+            [label]="inputs.search.label"
+            [control]="inputs.search.control"
+            [formAtribute]="formAtribute"
+            (blurEvent)="onBlurEvent($event)"
+            (focusEvent)="onFocusEvent($event)"
+          ></app-form-field>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <app-data-table
+          *ngIf="tableItems.length"
+          [displayedColumns]="displayedColumns"
+          [columns]="tableColumns"
+          [items]="tableItems"
+          (ActionBtnClick)="actionTableClick($event)"
+          (paginatorControl)="getList()"
+        ></app-data-table>
+
+        <mat-paginator
+          [pageSizeOptions]="[10]"
+          [length]="length"
+          [pageSize]="pageSize"
+          [pageIndex]="pageIndex"
+          showFirstLastButtons
+          (page)="getList()"
+        >
+        </mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>

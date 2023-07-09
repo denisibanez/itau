@@ -1,0 +1,30 @@
+#customLoaderComponent__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+
+  img {
+    margin-top: 25px;
+    max-width: 100px;
+  }
+
+  ::ng-deep.mat-progress-spinner {
+    width: 75px !important;
+    height: 75px !important;
+
+    svg {
+      width: 75px !important;
+      height: 75px !important;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  #customLoaderComponent__wrapper {
+    img {
+      width: 100%;
+    }
+  }
+}

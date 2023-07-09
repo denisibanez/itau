@@ -1,0 +1,18 @@
+<div class="formselect__select">
+  <mat-form-field appearance="outline" [formGroup]="formAtribute">
+    <mat-label>{{ label }}</mat-label>
+    <mat-select
+      [multiple]="multiple"
+      (selectionChange)="change($event.value)"
+      [placeholder]="placeholder"
+      [formControlName]="control"
+    >
+      <mat-option *ngFor="let item of list" [value]="item">{{
+        item.key
+      }}</mat-option>
+    </mat-select>
+    <mat-error *ngIf="formAtribute.invalid"
+      >O campo {{ label.toLowerCase() }} é inválido.</mat-error
+    >
+  </mat-form-field>
+</div>

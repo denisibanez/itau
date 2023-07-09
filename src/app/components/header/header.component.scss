@@ -1,0 +1,15 @@
+// GLOBAL
+@import '../../../assets/scss/_main.scss';
+
+.header {
+  &__wrapper {
+    height: 100px;
+    background-color: #ffe0cc;
+    border-bottom: 3px solid $primary;
+    display: flex;
+    align-items: center;
+    img {
+      max-width: 85px;
+    }
+  }
+}
